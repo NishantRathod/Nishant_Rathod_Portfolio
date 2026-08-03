@@ -71,3 +71,57 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+
+/* ================= CURSOR GLOW ================= */
+
+const glow = document.querySelector(".cursor-glow");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let currentX = 0;
+let currentY = 0;
+
+document.addEventListener("mousemove",(e)=>{
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+});
+
+function animateGlow(){
+
+    currentX += (mouseX-currentX)*0.12;
+    currentY += (mouseY-currentY)*0.12;
+
+    glow.style.left = currentX + "px";
+    glow.style.top = currentY + "px";
+
+    requestAnimationFrame(animateGlow);
+
+}
+
+animateGlow();
+
+const hoverItems = document.querySelectorAll(
+"a, button, .btn, .project-card, .skill-card"
+);
+
+hoverItems.forEach(item=>{
+
+    item.addEventListener("mouseenter",()=>{
+
+        glow.style.width="300px";
+        glow.style.height="300px";
+
+    });
+
+    item.addEventListener("mouseleave",()=>{
+
+        glow.style.width="220px";
+        glow.style.height="220px";
+
+    });
+
+});
