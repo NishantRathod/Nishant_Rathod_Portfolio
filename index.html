@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nishant Rathod | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    
+/>
 </head>
 
 <body>
 
-    
+    <div id="progress-bar"></div>
     <div class="cursor-glow"></div>
     <div class="container">
 
@@ -111,11 +115,13 @@
 
                 <div class="buttons">
 
-                    <a href="/assets/Nishant_Rathod_CSE_Python_Developer_Resume.pdf"
-                        target="_blank"
-                        class="btn">
+                    <a href="assets/Nishant_Rathod_CSE_Python_Developer_Resume.pdf"
 
-                        Resume
+                    class="btn"
+
+                    target="_blank">
+
+                    ⬇ Download Resume
 
                     </a>
 
@@ -130,6 +136,48 @@
             </div>
 
         </section>
+
+<!-- ================= STATISTICS ================= -->
+
+<section id="stats">
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="190">0</h2>
+
+            <p>LeetCode Problems</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="6">0</h2>
+
+            <p>Projects Built</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="1">0</h2>
+
+            <p>Design Patent</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="1">0</h2>
+
+            <p>Hackathon Winner</p>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- ================= SKILLS SECTION ================= -->
 
@@ -439,66 +487,147 @@
 <section id="contact">
 
     <div class="section-title">
-        <h2>Let's Connect</h2>
-        <p>Interested in working together? Feel free to reach out.</p>
+
+        <h2>Let's Work Together</h2>
+
+        <p>
+            Have an idea, internship opportunity, or just want to say hello?
+        </p>
+
     </div>
 
-    <div class="contact-container">
+    <div class="contact-wrapper">
 
-        <div class="contact-left">
+        <!-- Left Side -->
 
-            <h3>Contact Information</h3>
+        <div class="contact-form">
 
-            <div class="contact-item">
-                <h4>📧 Email</h4>
-                <p>
-                    <a href="mailto:nishantrathod7020@gmail.com">
-                        nishantrathod7020@gmail.com
-                    </a>
+            <h3>Send Me a Message</h3>
+
+            <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field">
+
+                <input
+                    type="hidden"
+                    name="form-name"
+                    value="contact">
+
+                <p hidden>
+
+                    <label>
+
+                        Don't fill this out:
+
+                        <input name="bot-field">
+
+                    </label>
+
                 </p>
-            </div>
 
-            <div class="contact-item">
-                <h4>📱 Phone</h4>
-                <p>
-                    <a href="tel:+917498341517">
-                        +91 74983 41517
-                    </a>
-                </p>
-            </div>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required>
 
-            <div class="contact-item">
-                <h4>📍 Location</h4>
-                <p>Kolhapur, Maharashtra, India</p>
-            </div>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required>
+
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject">
+
+                <textarea
+                    name="message"
+                    rows="7"
+                    placeholder="Write your message..."
+                    required></textarea>
+
+                <button
+                    type="submit"
+                    class="btn">
+
+                    Send Message
+
+                </button>
+
+            </form>
 
         </div>
 
-        <div class="contact-right">
+        <!-- Right Side -->
 
-            <h3>Find Me Online</h3>
+        <div class="contact-grid">
 
-            <div class="social-buttons">
+            <a
+                href="https://github.com/NishantRathod"
+                target="_blank"
+                class="contact-card">
 
-                <a href="https://github.com/NishantRathod" target="_blank">
-                    GitHub
-                </a>
+                <h3>💻 GitHub</h3>
 
-                <a href="https://www.linkedin.com/in/nishant-rathod-79789328b/" target="_blank">
-                    LinkedIn
-                </a>
+                <p>View my repositories</p>
 
-                <a href="https://leetcode.com/u/Nishantrathod14/" target="_blank">
-                    LeetCode
-                </a>
+            </a>
 
-            </div>
+            <a
+                href="https://www.linkedin.com/in/nishant-rathod-79789328b/"
+                target="_blank"
+                class="contact-card">
 
-            <a href="assets/Nishant_Rathod_CSE_Python_Developer_Resume.pdf"
-               target="_blank"
-               class="download-btn">
+                <h3>💼 LinkedIn</h3>
 
-                📄 Download Resume
+                <p>Let's connect</p>
+
+            </a>
+
+            <a
+                href="https://nishant-rathod-cse-portfolio.netlify.app/"
+                target="_blank"
+                class="contact-card">
+
+                <h3>🌐 Portfolio</h3>
+
+                <p>Explore my work</p>
+
+            </a>
+
+            <a
+                href="assets/Nishant_Rathod_CSE_Python_Developer_Resume.pdf"
+                target="_blank"
+                class="contact-card">
+
+                <h3>📄 Resume</h3>
+
+                <p>Download CV</p>
+
+            </a>
+
+            <a
+                href="mailto:nishantrathod7020@gmail.com"
+                class="contact-card">
+
+                <h3>📧 Email</h3>
+
+                <p>Send an Email</p>
+
+            </a>
+
+            <a
+                href="https://leetcode.com/u/Nishantrathod14/"
+                target="_blank"
+                class="contact-card">
+
+                <h3>🧠 LeetCode</h3>
+
+                <p>190+ Problems Solved</p>
 
             </a>
 

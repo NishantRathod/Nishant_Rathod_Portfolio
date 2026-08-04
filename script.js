@@ -125,3 +125,106 @@ hoverItems.forEach(item=>{
     });
 
 });
+
+
+/* ================= COUNTER ================= */
+
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            const counter = entry.target;
+
+            const target = +counter.dataset.target;
+
+            let count = 0;
+
+            const speed = target / 60;
+
+            const update = ()=>{
+
+                count += speed;
+
+                if(count < target){
+
+                    counter.innerText = Math.ceil(count);
+
+                    requestAnimationFrame(update);
+
+                }else{
+
+                    counter.innerText = target + "+";
+
+                }
+
+            }
+
+            update();
+
+            observer.unobserve(counter);
+
+        }
+
+    });
+
+});
+
+counters.forEach(counter=>observer.observe(counter));
+
+
+/* ================= MAGNETIC BUTTON ================= */
+
+const buttons=document.querySelectorAll(".btn");
+
+buttons.forEach(button=>{
+
+    button.addEventListener("mousemove",(e)=>{
+
+        const rect=button.getBoundingClientRect();
+
+        const x=e.clientX-rect.left;
+
+        const y=e.clientY-rect.top;
+
+        const moveX=(x-rect.width/2)/8;
+
+        const moveY=(y-rect.height/2)/8;
+
+        button.style.transform=
+        `translate(${moveX}px,${moveY}px)`;
+
+    });
+
+    button.addEventListener("mouseleave",()=>{
+
+        button.style.transform="translate(0,0)";
+    });
+
+});
+
+
+/* ================= SCROLL PROGRESS ================= */
+
+const progressBar = document.getElementById("progress-bar");
+
+window.addEventListener("scroll",()=>{
+
+    const scrollTop = document.documentElement.scrollTop;
+
+    const height =
+    document.documentElement.scrollHeight
+    -
+    document.documentElement.clientHeight;
+
+    const progress =
+    (scrollTop/height)*100;
+
+    progressBar.style.width = progress+"%";
+
+});
+
+
