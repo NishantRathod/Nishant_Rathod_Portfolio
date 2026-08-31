@@ -21,5 +21,5 @@ A modern responsive developer portfolio built using HTML, CSS and JavaScript.
 
 ## 📬 Contact
 
-- LinkedIn: https://linkedin.com/in/your-profile
+- LinkedIn: https://www.linkedin.com/in/nishant-rathod-79789328b/
 - GitHub: https://github.com/NishantRathod
